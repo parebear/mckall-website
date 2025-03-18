@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio - McKall Willis{% endblock %}
+
+{% block content %}
+<section class="portfolio-grid">
+    <div class="container">
+        <div class="photoshoot-grid">
+            {% for photoshoot in photoshoots %}
+            <div class="photoshoot-card">
+                <a href="{{ photoshoot.url }}" class="photoshoot-link">
+                    <div class="photoshoot-image">
+                        <img src="{{ url_for('static', filename=photoshoot.thumbnail) }}" alt="{{ photoshoot.title }}">
+                        <div class="photoshoot-overlay">
+                            <h3>{{ photoshoot.title }}</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

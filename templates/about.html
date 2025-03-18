@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}About - McKall Willis{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+    <div class="container">
+        <h1 class="page-title">About</h1>
+    </div>
+</section>
+
+<section class="about-content">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="McKall Willis">
+            </div>
+            <div class="about-text">
+                <h2>Fashion Stylist</h2>
+                <p>McKall Willis is a Los Angeles-based fashion stylist with an eye for creating memorable and impactful visual stories through clothing and accessories.</p>
+                
+                <p>With experience working across editorial, commercial, and personal styling, McKall brings a unique perspective that balances current trends with timeless elegance.</p>
+                
+                <h3>Approach</h3>
+                <p>McKall's styling approach focuses on enhancing each client's unique attributes while pushing creative boundaries. Whether working on a high-fashion editorial or styling a commercial campaign, the goal is always to create imagery that resonates and inspires.</p>
+                
+                <h3>Experience</h3>
+                <p>Having worked with photographers, models, and brands of all sizes, McKall has developed a versatile portfolio that showcases a range of styles and aesthetics.</p>
+                
+                <h3>Clients</h3>
+                <p>McKall has collaborated with [Notable Brand], [Fashion Magazine], [Celebrity Name], and many others.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

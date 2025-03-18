@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - McKall Willis{% endblock %}
+
+{% block content %}
+<section class="contact-hero">
+    <div class="container">
+        <h1 class="page-title">Contact</h1>
+    </div>
+</section>
+
+<section class="contact-content">
+    <div class="container">
+        <div class="contact-text">
+            <p>For styling inquiries, collaborations, or to discuss potential projects, please get in touch.</p>
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:your.email@example.com">your.email@example.com</a>
+            </div>
+            <div class="contact-method">
+                <i class="fab fa-instagram"></i>
+                <a href="https://instagram.com/yourusername" target="_blank">@yourusername</a>
+            </div>
+            <div class="contact-method">
+                <i class="fab fa-tiktok"></i>
+                <a href="https://tiktok.com/@yourusername" target="_blank">@yourusername</a>
+            </div>
+            <div class="contact-method">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Los Angeles, California</span>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <form action="{{ url_for('submit_contact') }}" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
